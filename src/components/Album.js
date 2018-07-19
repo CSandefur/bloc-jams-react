@@ -125,12 +125,10 @@ class Album extends Component {
       var tester = parseInt(longSeconds);
       if (tester > 10) {
         let seconds = longSeconds.toFixed(0);
-        console.log(seconds);
         let timeString = minutes + ':' + seconds;
         return timeString;
       } else {
-        let seconds = longSeconds.toFixed(1) * 10;
-        console.log(seconds);
+        let seconds = '0' + tester;
         let timeString = minutes + ':' + seconds;
         return timeString;
       }
