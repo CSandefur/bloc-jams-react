@@ -1,0 +1,62 @@
+.album {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100px, repeat(3, 1fr);
+  padding: 50px;
+  grid-column-gap: 65px;
+  grid-row-gap: 40px;
+}
+
+#album-info {
+  grid-column: 1;
+  grid-row: 1 / 5;
+  justify-self: center;
+}
+
+#song-list {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 350px;
+  max-width: 350px;
+  border-style: solid;
+  background-color: #ffffea;
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  border-color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.player-bar {
+  grid-column: 2;
+  grid-row: 3;
+  min-width: 350px;
+  max-width: 350px;
+  padding: 20px;
+  background-color: #ffffea;
+}
+
+#album-cover-art {
+  border-radius: 10px;
+}
+
+.album-details {
+  background-color: #ffffea;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 10px;
+  max-width: 600px;
+}
+
+#album-title {
+  font-size: 25px;
+  margin-top: .25em;
+  margin-bottom: .25em;
+}
+
+.artist {
+  font-style:italic;
+  font-size: 20px;
+  margin-top: .25em;
+}

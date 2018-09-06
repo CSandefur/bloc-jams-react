@@ -1,0 +1,50 @@
+.player-bar {
+  border-radius: 10px;
+  border-style: solid;
+  padding: 20px;
+  font-weight: bold;
+  display: grid;
+}
+
+#buttons {
+  padding: 15px;
+  border-style:solid;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#time-control {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#volume-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.labels {
+  order: 0;
+  padding: 10px;
+}
+
+.current-time {
+  order: 1;
+}
+.seek-bar {
+  margin-left: auto;
+  order: 3;
+}
+
+.total-time {
+  order: 2;
+}
+
+#percentDisplay {
+  order: 1;
+}

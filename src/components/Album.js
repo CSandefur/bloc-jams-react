@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
+import './Album.css';
 
 class Album extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class Album extends Component {
       currentTime: 0,
       duration: album.songs[0].duration,
       currentVolume: 0.5,
+      currentVolumeDisplay: 50 + "%",
       isPlaying: false,
       isPaused: false,
       isHovered: false,
@@ -114,6 +116,7 @@ class Album extends Component {
     const newVolume = e.target.value;
     this.audioElement.volume = newVolume;
     this.setState({ currentVolume: newVolume });
+    this.setState({ currentVolumeDisplay: parseInt(newVolume * 100) + "%" })
   }
 
   formatTime(x){
@@ -166,11 +169,13 @@ class Album extends Component {
           </tbody>
         </table>
         <PlayerBar
+          className="playerBar"
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
           currentTime={this.audioElement.currentTime}
           duration={this.audioElement.duration}
           currentVolume={this.state.currentVolume}
+          currentVolumeDisplay={this.state.currentVolumeDisplay}
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
